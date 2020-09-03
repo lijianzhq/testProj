@@ -1,0 +1,21 @@
+﻿/*资金池充值记录*/
+CREATE TABLE PROJ_FUNDPOOL_RECHARGE_RECORD
+(
+id					 NVARCHAR(32) NOT NULL PRIMARY KEY,
+FUNDPOOL_ID		 NVARCHAR(200) NOT NULL COMMENT '资金池ID',
+recharge_datetime      DATETIME NOT NULL COMMENT '充值的时间',
+recharge_serial_num	 NVARCHAR(200) NOT NULL COMMENT '充值的流水号',
+recharge_amount	 DECIMAL(19,2) NOT NULL COMMENT '充值的金额',
+discount		 DECIMAL(19,2) NOT NULL COMMENT '点数',
+get_amount		 DECIMAL(19,2) NOT NULL COMMENT '得币数',
+wallet_account		NVARCHAR(200) NOT NULL COMMENT '钱包',
+copy_text		 NVARCHAR(2000) COMMENT '复制过来的文本内容',
+creation_date    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+created_by       NVARCHAR(32) NOT NULL COMMENT '创建人',
+last_updated_by  NVARCHAR(32) NOT NULL COMMENT '最后更新人',
+last_updated_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL COMMENT '最后更新时间',
+enable_flag       NVARCHAR(1) NOT NULL DEFAULT 'Y' COMMENT '记录是否启用',
+order_index       INT DEFAULT 0 NOT NULL COMMENT '排序值',
+ROW_VERSION	   NVARCHAR(32) NOT NULL COMMENT '并发控制列',
+UNIQUE KEY `U1` (`recharge_serial_num`)
+);

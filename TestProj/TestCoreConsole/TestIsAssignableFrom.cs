@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -72,6 +73,11 @@ namespace TestCoreConsole
             Console.WriteLine("List<Int32> assignable from AAA: {0}", typeof(List<Int32>).IsAssignableFrom(typeof(AAA)));
             Console.WriteLine("I<T> assignable from BBB: {0}", typeof(I<String>).IsAssignableFrom(typeof(BBB)));
 
+            var type = typeof(BBB);
+            var type2 = typeof(CCC);
+            var type2Info = typeof(CCC).GetTypeInfo()
+                                .ImplementedInterfaces
+                                .FirstOrDefault(it => it.Name == typeof(I<>).Name);
             Console.ReadLine();
         }
     }
@@ -83,7 +89,15 @@ namespace TestCoreConsole
 
     public class BBB : I<String>
     {
-        public string ShowMsg()
+        public virtual string ShowMsg()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class CCC : BBB
+    {
+        public override string ShowMsg()
         {
             throw new NotImplementedException();
         }
