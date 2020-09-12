@@ -13,7 +13,10 @@ namespace TestCoreConsole
             //测试日期时间
             //TestDatetime.Start();
             //测试json
-            TestJson.Start();
+            //TestJson.Start();
+
+            //测试集合
+            CollectionTest.TestHashSet.Start();
 
             Console.ReadLine();
             Console.WriteLine("end test");
