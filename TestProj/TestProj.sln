@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCoreConsole", "TestCore
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBAccess", "DBAccess", "{A512E72A-765D-4E48-8DCE-45D81DD076B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDapper", "Orm\TestDapper\TestDapper.csproj", "{ED3D36C8-83F3-4065-A66C-428E3BC8CC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDapper", "Orm\TestDapper\TestDapper.csproj", "{ED3D36C8-83F3-4065-A66C-428E3BC8CC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFreeSql", "Orm\TestFreeSql\TestFreeSql.csproj", "{81B1B967-0C8E-4969-8B8C-01BECB452645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{ED3D36C8-83F3-4065-A66C-428E3BC8CC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED3D36C8-83F3-4065-A66C-428E3BC8CC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED3D36C8-83F3-4065-A66C-428E3BC8CC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B1B967-0C8E-4969-8B8C-01BECB452645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B1B967-0C8E-4969-8B8C-01BECB452645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B1B967-0C8E-4969-8B8C-01BECB452645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B1B967-0C8E-4969-8B8C-01BECB452645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ED3D36C8-83F3-4065-A66C-428E3BC8CC85} = {A512E72A-765D-4E48-8DCE-45D81DD076B8}
+		{81B1B967-0C8E-4969-8B8C-01BECB452645} = {A512E72A-765D-4E48-8DCE-45D81DD076B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC989C17-EC89-4AE6-BA37-E4C5FE796BF2}

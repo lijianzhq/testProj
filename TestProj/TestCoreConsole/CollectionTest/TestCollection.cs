@@ -5,16 +5,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test
+namespace TestCoreConsole.CollectionTest
 {
-    class TestCollection
+    public class TestCollection
     {
         public static void Start()
         {
             //Test4();
             //Test5();
             //TestOrderBy();
-            TestExcept();
+            //TestExcept();
+            TestUnion();
+        }
+
+        public static void TestUnion()
+        {
+            var a = new List<Int32>() { 1, 2, 3 };
+            var b = new List<Int32>() { 1, 5, 6 };
+            var c = a.Union(b);
+            foreach (var item in c)
+            {
+                Console.WriteLine(item);
+            }
+            List<Int32> d = new List<int>();
+            var e = c.Union(d);
+            foreach (var item in e)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         /// <summary>

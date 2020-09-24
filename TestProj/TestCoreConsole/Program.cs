@@ -16,9 +16,9 @@ namespace TestCoreConsole
             //TestJson.Start();
 
             //测试集合
-            CollectionTest.TestHashSet.Start();
+            //CollectionTest.TestHashSet.Start();
+            CollectionTest.TestCollection.Start();
 
-            Console.ReadLine();
             Console.WriteLine("end test");
             Console.ReadLine();
         }
